@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chinese Vocabulary Games</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0, transform: 'translateY(-10px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+            scorePop: {
+              '0%, 100%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(1.25)', color: '#67e8f9' },
+            },
+            cardMatch: {
+              '0%': { transform: 'scale(1)', opacity: 1 },
+              '50%': { transform: 'scale(1.1)', boxShadow: '0 0 15px #34d399' },
+              '100%': { transform: 'scale(0)', opacity: 0 },
+            }
+          },
+          animation: {
+            fadeIn: 'fadeIn 0.5s ease-out forwards',
+            scorePop: 'scorePop 0.3s ease-in-out',
+            cardMatch: 'cardMatch 0.5s ease-out forwards',
+          },
+        },
+      },
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-900 text-gray-200 font-sans">
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
